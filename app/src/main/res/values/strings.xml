@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">taskxm</string>
+    <string name="survey_title">Survey</string>
+    <string name="loading">Loading...</string>
+    <string name="submitted_questions_count">Submitted Questions: %1$d/%2$d</string>
+    <string name="question_number">Question %1$d of %2$d</string>
+    <string name="previous">Previous</string>
+    <string name="next">Next</string>
+    <string name="start_survey">Start survey</string>
+    <string name="already_submitted">Already Submitted</string>
+    <string name="submit">Submit</string>
+    <string name="success">Success!</string>
+    <string name="failure">Failure....</string>
+    <string name="retry">Retry</string>
+    <string name="error_loading_questions">Failed to load questions</string>
+    <string name="screen_initial">initial</string>
+    <string name="screen_questions">questions</string>
+    <string name="submission_failed">Submission failed</string>
+</resources>

@@ -1,0 +1,25 @@
+Index: app/src/main/java/com/example/taskxm/ui/SurveyViewModel.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/taskxm/ui/SurveyViewModel.kt b/app/src/main/java/com/example/taskxm/ui/SurveyViewModel.kt
+--- a/app/src/main/java/com/example/taskxm/ui/SurveyViewModel.kt	
++++ b/app/src/main/java/com/example/taskxm/ui/SurveyViewModel.kt	(date 1718366285976)
+@@ -51,13 +51,13 @@
+     }
+ 
+     private fun submitAnswer(answer: String) {
+-        val currentQuestion = _state.value.questions[_state.value.currentQuestionIndex]
+-        if (currentQuestion.answer.isNotBlank()) return
++        val currentQuestion = _state.value.questions
++        /*if (currentQuestion.answer.isNotBlank()) return*/
+ 
+         viewModelScope.launch {
+             _state.value = _state.value.copy(isSubmitting = true)
+             currentQuestion.answer = answer
+-            val response = repository.submitAnswer(currentQuestion)
++            val response = repository.submitAnswers(currentQuestion)
+             if (response.isSuccessful) {
+                 _state.value = _state.value.copy(
+                     answeredCount = _state.value.answeredCount + 1,
